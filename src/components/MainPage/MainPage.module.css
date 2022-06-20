@@ -7,3 +7,13 @@
   text-align: center;
   color: rgb(235, 235, 235);
 }
+
+.row {
+  background-color: red;
+}
+
+.code {
+  margin-top: 50px;
+  text-align: center;
+  color: rgb(64 0 183);
+}
