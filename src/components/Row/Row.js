@@ -1,18 +1,19 @@
-import Button from "./button";
-import { useState } from "react";
-import css from "./row.module.css";
+import Button from "../Button/Button";
+import css from "./Row.module.css";
 
 const Row = (props) => {
-  console.log(props);
-  const [value, setValue] = useState(true);
-
   const buttonHandler = (val) => {
-    setValue(false);
+    props.rowSelect(val);
   };
 
   const buttons = props.props.map((button, key) => {
     return <Button key={key} button={button} click={buttonHandler}></Button>;
   });
-  return value && buttons;
+  return (
+    <div className={css.row}>
+      <h1>{props.children}</h1>
+      {buttons}
+    </div>
+  );
 };
 export default Row;
