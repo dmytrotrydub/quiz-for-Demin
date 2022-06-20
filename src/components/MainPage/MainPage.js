@@ -21,9 +21,9 @@ const Page = (props) => {
   const rows = props.things.map((row, index) => {
     return (
       <div key={index}>
-        <h1 className={css.header}>{`Question Number ${++index}`}</h1>
+        <h1 className={css.header}>{`QUESTION ${++index}`}</h1>
         <Row props={row.items} rowSelect={rowSelectHandler}>
-          {row.question}
+          {row.question.toUpperCase()}
         </Row>
       </div>
     );
@@ -32,7 +32,7 @@ const Page = (props) => {
   const content = rows[displayedRow] ? (
     rows[displayedRow]
   ) : (
-    <div>
+    <div className={css.result}>
       <h2 className={css.code}>{`CODE: ${code}`}</h2>
       {selectedOptions.map((option) => {
         return (

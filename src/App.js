@@ -3,7 +3,7 @@ import Page from "./components/MainPage/MainPage";
 
 function App() {
   const things = [
-    { question: "Select Your skin type", items: ["Normal", "Oily", "Dry", "Sensetive", "Text"] },
+    { question: "Select Your skin type", items: ["Normal", "Oily", "Dry", "Sensitive", "Text"] },
     {
       question: "Select Your main problem",
       items: ["Acne", "Aging", "Pigment", "Redness", "Blackheads"],

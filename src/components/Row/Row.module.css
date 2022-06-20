@@ -1,17 +1,41 @@
 .row {
   margin-top: 100px;
-  background-color: royalblue;
+  background-color: #e1fcfd;
   padding: 10px;
   width: 100%;
   text-align: center;
-  animation: fadeInAnimation 1s;
+}
+
+.question {
+  color: #394f8a;
+}
+
+.in {
+  animation: fadeInAnimation 0.7s;
+}
+
+.out {
+  animation: fadeOutAnimation 0.7s;
 }
 
 @keyframes fadeInAnimation {
   0% {
     opacity: 0;
+    transform: translate3d(0, -20%, 0);
   }
   100% {
     opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeOutAnimation {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0, 20%, 0);
   }
 }
