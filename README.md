@@ -1,4 +1,4 @@
-##In App.js##
+# In App.js
 
 _Questions Array:_
 
@@ -21,6 +21,6 @@ _Questions Array:_
 
 Each question and its items will automatically be added to the list, there are no limits to number of questions or to the options each question has.
 
-**Assume the following:**
+**Assume the following:**  
 questions.length = number of questions in quiz  
 questions[n].items.length = number of answer for the question

@@ -10,7 +10,7 @@ function App() {
     },
     {
       question: "Select Your secondary problem",
-      items: ["Acne", "Aging", "Pigment", "Redness", "Jopa"],
+      items: ["Acne", "Aging", "Pigment", "Redness"],
     },
     // {
     //   question: "Another silly question",
