@@ -9,16 +9,16 @@ const Page = (props) => {
 
   const rowSelectHandler = (val) => {
     setCode((prevState) =>
-      prevState.concat(props.things[displayedRow].items.findIndex((element) => element === val))
+      prevState.concat(props.questions[displayedRow].items.findIndex((element) => element === val))
     );
     setDisplayedRow((prevState) => prevState + 1);
     setSelectedOptions((prevState) => [
       ...prevState,
-      { question: props.things[displayedRow].question, value: val, code: code },
+      { question: props.questions[displayedRow].question, value: val, code: code },
     ]);
   };
 
-  const rows = props.things.map((row, index) => {
+  const rows = props.questions.map((row, index) => {
     return (
       <div key={index}>
         <h1 className={css.header}>{`QUESTION ${++index}`}</h1>
@@ -38,7 +38,7 @@ const Page = (props) => {
         return (
           <div>
             <h3 className={css.result} key={option.question}>
-              {`${option.question.replace("Select", "")}: ${option.value}`}{" "}
+              {`${option.question.replace("Select", "")}: ${option.value.toUpperCase()}`}{" "}
             </h3>
           </div>
         );
